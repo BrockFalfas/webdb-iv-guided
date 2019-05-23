@@ -22,7 +22,7 @@ Tracks => Web, Android, iOS
 Cohorts => web18, webpt2
 Students => Mindy, Sean, Destiny
 
-Queries examples
-
+Queries Examples
+----------------
 select s.name as student, c.name from students as s inner join cohorts as c
 on s.cohort_id = c.id
