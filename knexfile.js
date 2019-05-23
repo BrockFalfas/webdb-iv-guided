@@ -5,5 +5,16 @@ module.exports = {
     connection: {
       filename: './data/lambda.db3', // the folder will be created when we run the migrations
     },
+    migrations: {
+      directory: "./data/migrations"
+    },
+    seeds: {
+      directory: "./data/seeds"
+    },
+    pool: {
+      afterCreate: (conn, done) => {
+        conn.run("PRAGMA foreign_keys = ON", done)
+      }
+    }
   },
 };
